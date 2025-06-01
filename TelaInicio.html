@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Góis-Ticket</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="welcome">Bem vindo, <strong>daniel</strong></div>
+    <div class="top-links">
+      <a href="#">Painel</a>
+      <a href="Perfil.html">Perfil</a>
+      <a href="#">Sair</a>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <a href="#">Painel de Controle</a>
+    <a href="#">Usuários</a>
+    <a href="#">Ticket</a>
+    <a href="#">Base de Conhecimento</a>
+  </nav>
+
+  <section class="filters">
+    <button>Aberto</button>
+    <button id="openModalBtn">Novo Ticket</button>
+    <button>Fechado</button>
+    <button>Minhas Requisições</button>
+  </section>
+  <!-- Modal -->
+<div id="ticketModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModalBtn">&times;</span>
+    <h2>Novo Ticket</h2>
+    <form class="ticket-form">
+      <label for="titulo">Título</label>
+      <input type="text" id="titulo" placeholder="Ex: Erro no sistema" required />
+
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" placeholder="Descreva o problema" required></textarea>
+
+      <label for="departamento">Departamento</label>
+      <select id="departamento" required>
+        <option value="">Selecione</option>
+        <option value="ti">TI</option>
+        <option value="rh">RH</option>
+        <option value="financeiro">Financeiro</option>
+      </select>
+
+      <label for="prioridade">Prioridade</label>
+      <select id="prioridade" required>
+        <option value="">Selecione</option>
+        <option value="baixa">Baixa</option>
+        <option value="media">Média</option>
+        <option value="alta">Alta</option>
+      </select>
+
+      <label for="responsavel">Responsável (opcional)</label>
+      <input type="text" id="responsavel" placeholder="Nome do responsável" />
+
+      <button type="submit">Criar Ticket</button>
+    </form>
+  </div>
+</div>
+
+  <section class="content">
+    <div class="search-bar">
+      <label for="search">Nº da Requisição</label>
+      <input type="text" id="search" placeholder="Aperte Enter* para pesquisar" />
+    </div>
+
+    <table class="tickets-table">
+      <thead>
+        <tr>
+          <th>Assunto</th>
+          <th>Status</th>
+          <th>Solicitante</th>
+          <th>Equipe</th>
+          <th>Responsável</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Linhas de exemplo -->
+        <tr>
+          <td>Erro no sistema</td>
+          <td>Aberto</td>
+          <td>João Silva</td>
+          <td>TI</td>
+          <td>Daniel</td>
+        </tr>
+        <tr>
+          <td>Solicitação de acesso</td>
+          <td>Fechado</td>
+          <td>Maria Lima</td>
+          <td>RH</td>
+          <td>Lucas</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      Página 1 de 3 — Exibindo 20 registros
+    </div>
+  </section>
+  <script>
+  const modal = document.getElementById("ticketModal");
+  const openBtn = document.getElementById("openModalBtn");
+  const closeBtn = document.getElementById("closeModalBtn");
+
+  openBtn.onclick = () => modal.style.display = "flex";
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  }
+</script>
+
+
+</body>
+</html>

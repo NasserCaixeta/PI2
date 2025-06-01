@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  background-color: #2A9D39;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 24px;
+  font-size: 14px;
+}
+
+.topbar a {
+  color: white;
+  margin-left: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.perfil-layout {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.perfil-box {
+  width: 350px;
+  background-color: #fff;
+  padding: 40px;
+  border-right: 2px solid #e0e0e0;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.blank-space {
+  flex: 1;
+}
+
+.perfil-box h2 {
+  font-size: 22px;
+  margin-bottom: 24px;
+  color: #2F80ED;
+  text-align: left;
+}
+
+.perfil-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-group input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+}
+
+button[type="submit"] {
+  padding: 12px;
+  background-color: #2A9D39;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #2A9D39;
+}
