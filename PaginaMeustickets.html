@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meus Tickets - Góis-Ticket</title>
+  <link rel="stylesheet" href="PaginaMeustickets.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="welcome">Bem vindo, <strong>daniel</strong></div>
+    <div class="top-links">
+      <a href="TelaInicio.html">Painel</a>
+      <a href="Perfil.html">Perfil</a>
+      <a href="PaginaLogin.html">Sair</a>
+    </div>
+  </header>
+
+  <nav class="filters">
+    <button>Aberto</button>
+    <button id="openModalBtn">Novo Ticket</button>
+    <button>Fechado</button>
+    <button>Minhas Requisições</button>
+  </nav>
+
+  <main class="tickets-container">
+    <h2>Meus Tickets</h2>
+
+    <div class="search-bar">
+      <label for="search">Nº da Requisição</label>
+      <input type="text" id="search" placeholder="Aperte Enter* para pesquisar" />
+    </div>
+
+    <table class="tickets-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Assunto</th>
+          <th>Status</th>
+          <th>Departamento</th>
+          <th>Criado em</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>123</td>
+          <td>Erro ao acessar sistema</td>
+          <td><span class="status aberto">Aberto</span></td>
+          <td>TI</td>
+          <td>01/06/2025</td>
+        </tr>
+        <tr>
+          <td>124</td>
+          <td>Solicitação de acesso</td>
+          <td><span class="status fechado">Fechado</span></td>
+          <td>RH</td>
+          <td>25/05/2025</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      Página 1 de 1 — Exibindo 2 registros
+    </div>
+  </main>
+  <script>
+  const modal = document.getElementById("ticketModal");
+  const openBtn = document.getElementById("openModalBtn");
+  const closeBtn = document.getElementById("closeModalBtn");
+
+  openBtn.onclick = () => modal.style.display = "flex";
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  }
+</script>
+</body>
+</html>

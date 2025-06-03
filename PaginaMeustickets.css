@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.topbar {
+  background-color: #2A9D39;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 24px;
+  font-size: 14px;
+}
+
+.topbar a {
+  color: white;
+  margin-left: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  padding: 20px 24px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.filters button {
+  padding: 10px 16px;
+  background-color: #2A9D39;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.filters button:hover {
+  background-color: #2A9D39;
+}
+
+.tickets-container {
+  padding: 40px 24px;
+  flex: 1;
+}
+
+.tickets-container h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #2F80ED;
+}
+
+.search-bar {
+  margin-bottom: 24px;
+}
+
+.search-bar label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.tickets-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tickets-table th, .tickets-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.tickets-table th {
+  background-color: #f0f2f5;
+  font-weight: 600;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status.aberto {
+  background-color: #e3f3ff;
+  color: #2F80ED;
+}
+
+.status.fechado {
+  background-color: #e6f4ea;
+  color: #219653;
+}
+
+.pagination {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
